@@ -131,6 +131,8 @@ Apple 會給我們一個轉寄用的代理地址(`@privaterelay.appleid.com`),
 
 **沒有廣告 ID、沒有位置、沒有使用行為分析。**
 App 不會記錄你按了哪些畫面、待了多久。
+(登入用到 Firebase Authentication,但**只有登入那一個模組** ——
+沒有 Analytics、沒有 Crashlytics,見上面「二、登入」。)
 
 **一個裝置識別碼(登入後才有):** 為了讓「每天學了幾題」能分裝置統計
 (兩台裝置同一天各學的量要相加,不是互相覆蓋),我們會為這個 App
@@ -188,8 +190,20 @@ App 不會記錄你按了哪些畫面、待了多久。
 你按下「用 Google 登入」或「用 Apple 登入」時,App 會把對方發的身分憑證
 送到我們自己的伺服器(Cloudflare)換一個工作階段。不按就不會有這個連線。
 
-Apple 登入走的是 Apple 的網頁授權流程(由 Firebase 代為開啟)——
+**兩種登入都經過 Google 的 Firebase Authentication。** 你在 Google 或 Apple
+的介面上完成登入後,Firebase 會發一組身分權杖給 App,App 再拿那組權杖到
+ThaiJam 的伺服器換工作階段。
+
+也就是說 **Google 會知道你用這個帳號登入過 ThaiJam**,並在 Firebase 端保有
+一筆帳號紀錄(識別碼、email、登入方式)。Android 沒有 Apple 的原生登入元件,
+所以 Apple 登入也是走 Firebase 開啟 Apple 的網頁授權頁 ——
 **你是直接在 Apple 的頁面上輸入帳密,ThaiJam 看不到它們。**
+
+Firebase 的資料處理適用
+[Google 隱私權政策](https://policies.google.com/privacy)。
+
+**Firebase 只用於登入。** 我們沒有安裝 Firebase Analytics、Crashlytics 或
+任何其他 Firebase 模組 —— 沒有使用行為統計,也沒有崩潰回報。
 
 ### 三、學習內容同步(登入後才有)
 

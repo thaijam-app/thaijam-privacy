@@ -169,6 +169,22 @@ LRCLIB 的資料處理方式請見他們的網站。
 我們**不會**取得你的 Apple ID 或 Google 帳號密碼、真實姓名或付款資訊 —— 付款完全由 Apple
 處理，我們只收到一組交易識別碼。
 
+### 登入會經過 Firebase Authentication（Google 的服務）
+
+**Google 登入**由 Google 的 **Firebase Authentication** 代為處理：你在 Google 的
+介面上完成登入後，Firebase 會發一組身分權杖（ID token）給 App，App 再把那組
+權杖送到 ThaiJam 的伺服器換取工作階段。
+
+也就是說 **Google 會知道你用這個 Google 帳號登入過 ThaiJam**，並在 Firebase 端
+保有一筆帳號紀錄（識別碼、email、登入方式）。這是使用 Google 登入無法避免的
+一部分。**Apple 登入在 iOS 走的是 Apple 原生的流程，不經過 Firebase。**
+
+Firebase 的資料處理適用
+[Google 隱私權政策](https://policies.google.com/privacy)。
+
+**Firebase 只用於登入。** 我們沒有安裝 Firebase Analytics、Crashlytics 或
+任何其他 Firebase 模組 —— 沒有使用行為統計，也沒有崩潰回報。
+
 ### 匯出我的資料
 
 在「我的 → 帳號設定 → 匯出我的資料」可以下載一份機器可讀的 JSON，內容包含你的
