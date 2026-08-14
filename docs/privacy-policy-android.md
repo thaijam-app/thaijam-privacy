@@ -80,8 +80,6 @@ ThaiJam 泰記**不會出售你的資料,也不會用於廣告追蹤**,沒有廣
 
 ### 用 Google 或 Apple 登入之後
 
-兩種登入方式都有,你選哪一種都可以,拿到的帳號是一樣的。
-
 **一、你的帳號識別資料**
 
 - 你 Google 或 Apple 帳號的**識別碼**(對方發的一串字,**不是你的密碼**)
@@ -90,9 +88,8 @@ ThaiJam 泰記**不會出售你的資料,也不會用於廣告追蹤**,沒有廣
 用途是讓你的學習進度與 AI 點數有個歸屬,換手機時找得回來。
 不會用它寄行銷信,也不會提供給第三方。
 
-**用 Apple 登入時可以隱藏 email。** 你選「隱藏我的電子郵件」的話,
-Apple 會給我們一個轉寄用的代理地址(`@privaterelay.appleid.com`),
-**我們拿不到你真正的信箱**。功能完全不受影響。
+用 Apple 登入時若選「隱藏我的電子郵件」,Apple 會給我們一個轉寄用的
+代理地址(`@privaterelay.appleid.com`),**我們拿不到你真正的信箱**。
 
 **二、你的學習內容(這是登入之後才會有的)**
 
@@ -208,14 +205,13 @@ App 不會記錄你開了哪些畫面、待了多久、按了什麼。
 你按下「用 Google 登入」或「用 Apple 登入」時,App 會把對方發的身分憑證
 送到我們自己的伺服器(Cloudflare)換一個工作階段。不按就不會有這個連線。
 
-**兩種登入都經過 Google 的 Firebase Authentication。** 你在 Google 或 Apple
-的介面上完成登入後,Firebase 會發一組身分權杖給 App,App 再拿那組權杖到
-ThaiJam 的伺服器換工作階段。
+**兩種登入都經過 Google 的 Firebase Authentication。**
+你在 Google 或 Apple 的介面上完成登入後,Firebase 會發一組身分權杖給 App,
+App 再拿它到 ThaiJam 的伺服器換工作階段。
 
-也就是說 **Google 會知道你用這個帳號登入過 ThaiJam**,並在 Firebase 端保有
-一筆帳號紀錄(識別碼、email、登入方式)。Android 沒有 Apple 的原生登入元件,
-所以 Apple 登入也是走 Firebase 開啟 Apple 的網頁授權頁 ——
-**你是直接在 Apple 的頁面上輸入帳密,ThaiJam 看不到它們。**
+因此 **Google 會知道你用這個帳號登入過 ThaiJam**,並在 Firebase 端保有一筆
+帳號紀錄(識別碼、email、登入方式)。帳號密碼一律在對方的頁面上輸入,
+ThaiJam 看不到。
 
 Firebase 的資料處理適用
 [Google 隱私權政策](https://policies.google.com/privacy)。
