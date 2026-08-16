@@ -52,6 +52,7 @@ permalink: /support/
 ### 隱私權政策
 
 - iOS 版：[隱私權政策](/privacy-policy/)
+- iOS English: [Privacy Policy](/privacy-policy-en/)
 - Android 版：[隱私權政策](/privacy-policy-android/)
 
 ---
