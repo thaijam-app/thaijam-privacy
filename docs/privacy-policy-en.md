@@ -4,7 +4,7 @@ permalink: /privacy-policy-en/
 
 # ThaiJam Privacy Policy (iOS)
 
-**Last updated: 17 August 2026**
+**Last updated: 20 August 2026**
 
 [繁體中文版](/privacy-policy/)
 
@@ -20,9 +20,11 @@ OpenAI, or Microsoft Azure Speech as described below.
 
 ## Data we collect and store
 
-On first launch, ThaiJam creates a random **anonymous ThaiJam account identifier and session**.
-This lets server-backed features work without asking for your name or email. Most on-device
-features do not require Apple or Google sign-in. You must link Apple or Google before buying
+On first launch, ThaiJam asks you to choose between **starting to learn straight away** and
+linking an Apple or Google account. If you choose to start straight away, ThaiJam creates a
+random **anonymous ThaiJam account identifier and session** — this lets server-backed features
+work without asking for your name or email. If you choose to sign in, no anonymous account is
+created. Most on-device features do not require Apple or Google sign-in. You must link Apple or Google before buying
 AI Credits or using the same ThaiJam account reliably on another device. Spotify uses its own
 authorization page.
 
@@ -66,8 +68,9 @@ Account settings.
 
 ### Anonymous account
 
-The anonymous identifier contains no name, email address, or provider account. It is persistent
-and is associated with server-backed data. If you later sign in with Apple or Google, ThaiJam
+The anonymous identifier is created only when you choose to start without signing in. It
+contains no name, email address, or provider account. It is persistent and is associated with
+server-backed data. If you later sign in with Apple or Google, ThaiJam
 attempts to link that provider to the same user ID so your existing data is preserved. If the
 provider already belongs to another ThaiJam account, the app asks before switching and does not
 merge the two server accounts automatically.

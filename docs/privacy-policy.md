@@ -4,7 +4,7 @@ permalink: /privacy-policy/
 
 # ThaiJam 泰記 App 隱私權政策(iOS 版)
 
-**最後更新：2026 年 8 月 17 日**
+**最後更新：2026 年 8 月 20 日**
 
 [English version](/privacy-policy-en/)
 
@@ -20,7 +20,7 @@ ThaiJam 泰記**不會出售你的資料，也不會用於廣告追蹤**。資�
 
 ## 我們收集哪些資料
 
-首次啟動時，ThaiJam 會建立一個不含姓名或 Email 的**匿名帳號識別碼與工作階段**，讓需要伺服器的功能不必先要求你提供身分。多數本機功能不需要 Apple 或 Google 登入；若要購買 AI 點數，或讓其他裝置存取同一個 ThaiJam 帳號，則需連結 Apple 或 Google。Spotify 整合的登入由 Spotify 授權頁處理。ThaiJam **沒有廣告 SDK，也沒有安裝任何第三方分析套件**（詳見下面「使用紀錄」）。
+首次啟動時，ThaiJam 會請你選擇要**直接開始學習**還是連結 Apple／Google 帳號。選擇直接開始時，App 才會建立一個不含姓名或 Email 的**匿名帳號識別碼與工作階段**，讓需要伺服器的功能不必先要求你提供身分；選擇登入的話不會建立匿名帳號。多數本機功能不需要 Apple 或 Google 登入；若要購買 AI 點數，或讓其他裝置存取同一個 ThaiJam 帳號，則需連結 Apple 或 Google。Spotify 整合的登入由 Spotify 授權頁處理。ThaiJam **沒有廣告 SDK，也沒有安裝任何第三方分析套件**（詳見下面「使用紀錄」）。
 App 不會出售你的資料或把資料用於廣告追蹤；需要連線的功能與資料範圍列在下方。
 
 以下資料儲存在你的裝置；啟用跨裝置同步時，標示為可同步的資料會存入 ThaiJam 的伺服器（Cloudflare）:
