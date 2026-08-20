@@ -2,7 +2,73 @@
 permalink: /support/
 ---
 
+# ThaiJam Support ／ ThaiJam 泰記支援
+{: #en}
+
+**English** ｜ [中文](#zh)
+
+---
+
+## Contact
+
+Email us at [support@thaijam.app](mailto:support@thaijam.app).
+
+Please include:
+
+- App version and build (Me → Settings)
+- Device model and OS version (iOS version for iPhone/iPad, or phone model and Android version)
+- Which feature, what you did, and a screenshot
+- For AI credits or purchases: the Apple order information (iOS) or the Google Play order number (Android)
+- **Never send** passwords, full card numbers, or one-time verification codes — we will never ask for them
+
+## Frequently asked questions
+
+### Do I need an account to learn?
+
+No. Flashcards, review, quizzes, the alphabet, sentences and songs all work without signing in.
+Only **AI features, in-app purchases and pronunciation scoring** require an account (Apple or Google).
+
+### How do I restore an AI credit purchase?
+
+Sign in with **the same account you bought it with**, then go to Me → AI Credits and refresh.
+Purchases that were not credited retry automatically — the receipt is kept, so your money is not lost.
+If it still has not arrived, email us with the order information.
+
+### How do I delete my ThaiJam account?
+
+Me → AI Credits → Delete Account. Deleting forfeits any remaining AI credits; the app confirms before it proceeds.
+
+### How do I manage sync across devices?
+
+**iOS**: Me → Settings controls **cross-device sync** (stored on the ThaiJam server) and
+**iCloud audio backup** (stored in your own private iCloud database) separately. They are independent switches.
+
+**Android**: Me → Settings → Cross-device sync. Android has no iCloud, so imported audio files
+and cover art stay on that device only.
+
+### My data did not follow me to a new phone
+
+Check that both devices are **signed in to the same account** and that cross-device sync is on.
+Audio files and album art **do not** sync — only song titles, artists and lyrics do. That is deliberate.
+
+### Pronunciation scoring says I am out of attempts for today
+
+There is a fixed number of free attempts each day; it resets the next day.
+You can exchange AI credits for more from the pronunciation scoring screen.
+
+### Privacy policy
+
+- iOS: [Privacy Policy (English)](/privacy-policy-en/) ／ [隱私權政策（中文）](/privacy-policy/)
+- Android: [隱私權政策](/privacy-policy-android/)
+
+---
+
 # ThaiJam 泰記支援
+{: #zh}
+
+[English](#en) ｜ **中文**
+
+## 聯絡我們
 
 需要協助時，請寄信至：[support@thaijam.app](mailto:support@thaijam.app)
 
@@ -57,4 +123,4 @@ permalink: /support/
 
 ---
 
-最後更新：2026-08-14
+Last updated ／ 最後更新：2026-08-20
