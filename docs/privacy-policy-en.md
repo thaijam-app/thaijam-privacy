@@ -34,7 +34,7 @@ screens you open or how long you spend on them. AI service usage records are des
 
 | Data | Where it is stored | Purpose |
 | --- | --- | --- |
-| Study results, review schedule and streak activity | On-device database; ThaiJam servers if cross-device sync is enabled | Schedule reviews and continue on another device |
+| Study results, review schedule, streak activity, and which learning-map lessons you finished with their quiz scores | On-device database; ThaiJam servers if cross-device sync is enabled | Schedule reviews and continue on another device |
 | Pronunciation score and assessment time, excluding the recording | On-device database; ThaiJam servers if cross-device sync is enabled | Practice history and sync |
 | Cards, decks, hidden state and deck membership you create or import | On-device database; ThaiJam servers if cross-device sync is enabled | Your study content and sync |
 | Song details and lyrics you add | On-device database; ThaiJam servers if cross-device sync is enabled | Song study and sync |
