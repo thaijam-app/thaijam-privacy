@@ -23,6 +23,10 @@ Please include:
 
 ## Frequently asked questions
 
+### How do I connect Spotify to ThaiJam?
+
+Follow the [Spotify Client ID setup guide](/spotify-setup/) to create a Spotify Developer App, copy its Client ID, and connect it in ThaiJam.
+
 ### Do I need an account to learn?
 
 No. Flashcards, review, quizzes, the alphabet, sentences and songs all work without signing in.
@@ -82,6 +86,10 @@ You can exchange AI credits for more from the pronunciation scoring screen.
 
 ## 常見問題
 
+### 如何將 Spotify 連結到 ThaiJam？
+
+請依照 [Spotify Client ID 設定教學](/spotify-setup/) 建立 Spotify Developer App、複製 Client ID，再回到 ThaiJam 完成連結。
+
 ### 核心學習功能需要登入嗎？
 
 不需要。單字卡、複習、測驗、字母、句子、歌曲都可以在不登入的情況下使用。
@@ -123,4 +131,4 @@ You can exchange AI credits for more from the pronunciation scoring screen.
 
 ---
 
-Last updated ／ 最後更新：2026-08-20
+Last updated ／ 最後更新：2026-08-28
