@@ -123,9 +123,12 @@ The app may connect to the network in these cases:
    require an app update. **The request carries no account, no device identifier and no study data**,
    and the response is identical for every user. The result is stored on the device and reused when
    offline; if it has never been fetched, the app shows its built-in version — so the card stays
-   complete and dismissible with no network. **This is not advertising:** the card only promotes
-   ThaiJam's own social account, there is no third-party ad SDK, no advertising identifier, and no
-   record of whether you saw or tapped it.
+   complete and dismissible with no network. **This is not third-party advertising.** Today the card
+   carries only ThaiJam's own content, such as our social account. In future it may carry content
+   from creators we collaborate with; when it does, the card is labelled "Partner" so you can tell
+   it apart from our own. Either way: no third-party ad SDK, no advertising identifier, no record of
+   whether you saw or tapped it, and the image is served from ThaiJam's own storage — seeing the
+   card never connects you to someone else's server.
 5. **Lyric search.** The song title and artist you enter are sent to
    [LRCLIB](https://lrclib.net). No ThaiJam identifier is attached.
 6. **Apple Music.** If authorized, MusicKit searches Apple's catalog, fetches basic track details
@@ -228,7 +231,7 @@ ThaiJam does not use the camera, location, contacts or health data.
 
 ## Children and minors
 
-ThaiJam carries no third-party advertising, no advertising identifier and no third-party analytics SDK; the only promotional content is the invitation card for ThaiJam's own social account described under outbound network connections. ThaiJam is not primarily directed at children. AI Credit purchases use Apple's in-app purchase system
+ThaiJam carries no third-party advertising, no advertising identifier and no third-party analytics SDK; the only promotional content is the in-app invitation card described under outbound network connections — today it carries only ThaiJam's own content, and content from collaborating creators would be labelled as such. ThaiJam is not primarily directed at children. AI Credit purchases use Apple's in-app purchase system
 and remain subject to Screen Time, Ask to Buy and other parental controls. ThaiJam cannot bypass those
 controls. Refund requests can be made through [Apple's refund process](https://support.apple.com/HT204084).
 
