@@ -4,7 +4,7 @@ permalink: /privacy-policy-en/
 
 # ThaiJam Privacy Policy (iOS)
 
-**Last updated: 20 August 2026**
+**Last updated: 1 September 2026**
 
 [繁體中文版](/privacy-policy/)
 
@@ -16,7 +16,10 @@ permalink: /privacy-policy-en/
 ThaiJam does **not** sell your data or use it for advertising or cross-app tracking. Most data
 starts on your device. Depending on the features you choose, the app may connect to ThaiJam's
 Cloudflare services, your private iCloud database, LRCLIB, Apple Music, Spotify, Shazam,
-OpenAI, or Microsoft Azure Speech as described below.
+OpenAI, or Microsoft Azure Speech as described below. **The one connection that does not wait for
+you to do anything is the launch-time fetch of the social invitation card's content** (item 4 under
+outbound network connections) — that request carries no account, no device identifier and no study
+data.
 
 ## Data we collect and store
 
@@ -115,25 +118,33 @@ The app may connect to the network in these cases:
 3. **Content updates.** The app downloads public learning content from ThaiJam's content service.
    The request includes a random installation identifier for downloads and error handling. Cards,
    study history, songs and lyrics are not sent to the content-update service.
-4. **Lyric search.** The song title and artist you enter are sent to
+4. **In-app social invitation card.** On launch the app fetches the card's text, link and (if one
+   is configured) a background image from ThaiJam's server, so that changing a line of copy does not
+   require an app update. **The request carries no account, no device identifier and no study data**,
+   and the response is identical for every user. The result is stored on the device and reused when
+   offline; if it has never been fetched, the app shows its built-in version — so the card stays
+   complete and dismissible with no network. **This is not advertising:** the card only promotes
+   ThaiJam's own social account, there is no third-party ad SDK, no advertising identifier, and no
+   record of whether you saw or tapped it.
+5. **Lyric search.** The song title and artist you enter are sent to
    [LRCLIB](https://lrclib.net). No ThaiJam identifier is attached.
-5. **Apple Music.** If authorized, MusicKit searches Apple's catalog, fetches basic track details
+6. **Apple Music.** If authorized, MusicKit searches Apple's catalog, fetches basic track details
    and plays music. [Apple's privacy policy](https://www.apple.com/legal/privacy/) applies.
-6. **Spotify.** Search text is sent to Spotify's Web API. The authorization token stays in the
+7. **Spotify.** Search text is sent to Spotify's Web API. The authorization token stays in the
    device Keychain. When iCloud audio backup is enabled, your Client ID is stored in iCloud KVS;
    Spotify authorization itself must be granted separately on each device. A selected track ID is
    included in song data and reaches ThaiJam's servers only when cross-device sync is enabled.
    App Remote lets Spotify play audio while ThaiJam reads the current track and playback position
    to align local lyrics. [Spotify's privacy policy](https://www.spotify.com/legal/privacy-policy/) applies.
-7. **Shazam.** After you choose Identify song and allow microphone access, ShazamKit matches an
+8. **Shazam.** After you choose Identify song and allow microphone access, ShazamKit matches an
    audio signature. ThaiJam does not keep or upload the raw recording. Apple's terms apply.
-8. **Pronunciation assessment.** After you record and submit up to 10 seconds of speech, the audio
+9. **Pronunciation assessment.** After you record and submit up to 10 seconds of speech, the audio
    and Thai reference text are sent through ThaiJam's Cloudflare Workers to Microsoft Azure Speech.
    The recording is buffered temporarily and deleted after submission or when you leave the screen.
    Neither ThaiJam nor the assessment service writes the recording or recognized text to a database.
    The returned score and recognized text remain locally; if cross-device sync is enabled, only the
    score and timestamp sync to ThaiJam. [Microsoft's privacy statement](https://privacy.microsoft.com/privacystatement) applies.
-9. **AI text features.** These are described in the next section.
+10. **AI text features.** These are described in the next section.
 
 Read-aloud, Apple Translation, word segmentation and tracing scores run on the device.
 
@@ -217,7 +228,7 @@ ThaiJam does not use the camera, location, contacts or health data.
 
 ## Children and minors
 
-ThaiJam is not primarily directed at children. AI Credit purchases use Apple's in-app purchase system
+ThaiJam carries no third-party advertising, no advertising identifier and no third-party analytics SDK; the only promotional content is the invitation card for ThaiJam's own social account described under outbound network connections. ThaiJam is not primarily directed at children. AI Credit purchases use Apple's in-app purchase system
 and remain subject to Screen Time, Ask to Buy and other parental controls. ThaiJam cannot bypass those
 controls. Refund requests can be made through [Apple's refund process](https://support.apple.com/HT204084).
 
