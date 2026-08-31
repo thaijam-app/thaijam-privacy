@@ -118,8 +118,8 @@ The app may connect to the network in these cases:
 3. **Content updates.** The app downloads public learning content from ThaiJam's content service.
    The request includes a random installation identifier for downloads and error handling. Cards,
    study history, songs and lyrics are not sent to the content-update service.
-4. **In-app social invitation card.** On launch the app fetches the card's text, link and (if one
-   is configured) a background image from ThaiJam's server, so that changing a line of copy does not
+4. **In-app social invitation card.** On launch the app fetches what the card shows — text, links and
+   (if any are configured) one or more images — from ThaiJam's server, so that changing a line of copy does not
    require an app update. **The request carries no account, no device identifier and no study data**,
    and the response is identical for every user. The result is stored on the device and reused when
    offline; if it has never been fetched, the app shows its built-in version — so the card stays
