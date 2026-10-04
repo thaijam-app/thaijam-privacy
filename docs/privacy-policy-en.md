@@ -4,7 +4,7 @@ permalink: /privacy-policy-en/
 
 # ThaiJam Privacy Policy (iOS)
 
-**Last updated: 1 September 2026**
+**Last updated: ○ ○ 2026** (draft: fill in when 1.1 ships)
 
 [繁體中文版](/privacy-policy/)
 
@@ -77,6 +77,71 @@ server-backed data. If you later sign in with Apple or Google, ThaiJam
 attempts to link that provider to the same user ID so your existing data is preserved. If the
 provider already belongs to another ThaiJam account, the app asks before switching and does not
 merge the two server accounts automatically.
+
+## Data from features added in 1.1
+
+The features below belong to your ThaiJam account and are stored on ThaiJam's servers (Cloudflare).
+**None of them stores recordings.**
+
+### Topic missions: plans and answer records
+
+| Data | Purpose |
+| --- | --- |
+| Which dramas you picked, which one you are studying now, your daily pace and, if you set one, your departure or target date | Pick "today's step" and continue across your devices |
+| A record for each answer: mission and question IDs, how you answered (spoken, typed, word tiles, fill-in, choice), result, stars, hints used, time, content version | Continue progress, schedule next-day checks, award ability badges and Study Coins |
+| Ability badges you earned: which badge, when, how you earned it (spoken or typed), and the IDs of the answer records it rests on | Keep your badges on a new device or after reinstalling; never pay the same badge twice |
+
+Answer records **contain no recordings and none of the words you said or typed** — only the result.
+
+### Personal study set (ThaiJam Max)
+
+Something is saved only when you tap "Save to study set". A saved item holds:
+
+- the lesson IDs it refers to (the lesson content itself is not copied)
+- **what you said (the speech-recognition text) or typed**, exactly as it was — this can include personal details such as a name you said during practice
+- the feedback, stars and hints for that answer, plus any title and note you wrote
+- for a before/after comparison, the IDs of the two answer records
+
+**Recordings are not saved.** Your study set is **visible only to you** and never appears in the weekly community or any public page. You can delete any item, export selected items as text, and everything is deleted with your account. If your plan ends, saved items stay readable and deletable; you just can't add new ones.
+
+### Backpack and tickets
+
+| Data | Purpose |
+| --- | --- |
+| The tickets you hold (trial, make-up check-in, double coins, card pack, outfit) — source, quantity and expiry of each batch | Keep them on every device |
+| Each time a ticket is received, used or expires; when double coins are active; trial history | Prevent double claims or double use; support requests |
+| When ThaiJam grants tickets: the staff member and the reason | Internal audit. Audit records do not contain your email |
+
+For redeem codes, the server stores only a hash of the code and who redeemed it, not the code itself.
+
+### Inviting friends
+
+- Your invite code is linked to your account (stored as-is so it can be shown to you).
+- When someone enters your code, we record who invited whom and the rewards given; for the invited person we keep only the dates they studied, to check whether the reward threshold was reached.
+- To stop one device from claiming twice: iOS uses Apple's DeviceCheck (ThaiJam stores no device identifier); for Android see the Android policy.
+
+### Weekly community topics
+
+**Your results are private by default.** They become public only when you choose to share, look at the preview and confirm. A shared card can **only** contain:
+
+- the name of the mission or ability badge
+- optionally, your nickname, a Jammy avatar and one preset reflection
+
+A card **cannot** contain free text, recordings, photos, your answers, study dates or account identifiers; nothing from your personal study set appears in the community.
+
+| Data | Notes |
+| --- | --- |
+| Your shares, the encouragement you give to others, your vote for next week's topic | Fixed options only; one encouragement per share and one vote per week, both changeable |
+| Who you blocked | Only you know; once blocked, neither of you sees the other |
+| Reports (fixed reasons) and moderators' decisions | Deleted automatically after **one year** |
+
+Withdrawing a share removes only the public card, not your private progress or badges. When you delete your account, your shares, encouragement and votes are removed; in reports and moderation records still within their retention period, your account is replaced by an identifier that cannot be traced back to you.
+
+### Drama audio
+
+- Pre-recorded lines are downloaded from ThaiJam's servers and cached on your device (up to 200 MB; the least recently used files are removed first). **These downloads carry no account or identifier.**
+- Lines without a recording are synthesized on demand by ThaiJam's server: only **the Thai line from the lesson and the voice gender** are sent, then passed to [OpenAI](https://openai.com/policies/privacy-policy) for speech synthesis. Results are cached by content hash with no account attached. To prevent abuse, this request needs a signed-in account and app verification, and counts toward a daily limit.
+- Lines that would contain your own name are **never read aloud**, so your name is never sent for synthesis.
 
 ## Identifiers used on iOS
 
@@ -197,7 +262,8 @@ native iOS flow and does not pass through Firebase. [Google's privacy policy](ht
 ### Export your data
 
 Profile → Account settings → Export my data downloads a machine-readable JSON file containing study
-data held by ThaiJam, Study Coin data, the AI credit ledger and purchase records. It excludes imported
+data held by ThaiJam, Study Coin data, the AI credit ledger and purchase records, plus your topic-mission
+plans and answer records, ability badges, personal study set, backpack tickets and weekly-community shares. It excludes imported
 media, original Apple or Google identifiers, and deleted items. Contact support if you need a broader
 access request covering internal account fields.
 
@@ -208,7 +274,9 @@ require contacting support.
 
 Deletion closes the active ThaiJam account and removes any Apple or Google sign-in link, email,
 App Attest device-key information, feedback, remaining AI Credits, and the server copy of cards,
-study progress, songs, lyrics, AI results and Study Coin data.
+study progress, songs, lyrics, AI results and Study Coin data. Topic-mission plans and answer records,
+ability badges, your personal study set, backpack tickets and redeem records are deleted too, and your
+weekly-community shares, encouragement and votes are removed (see "Weekly community topics" for reports).
 
 Purchase, credit-spending and related service records are retained in **pseudonymized form for five
 years**, then deleted automatically. They retain no link to a sign-in account and are kept for tax
