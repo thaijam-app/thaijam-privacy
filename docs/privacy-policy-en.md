@@ -279,7 +279,8 @@ When you buy on Google Play, the account reference we give Google is a **one-way
 
 Profile → Account settings → Export my data downloads a machine-readable JSON file containing study
 data held by ThaiJam, Study Coin data, the AI credit ledger and purchase records, plus your topic-mission
-plans and answer records, ability badges, personal study set, backpack tickets and weekly-community shares. It excludes imported
+plans and answer records, ability badges, personal study set, backpack tickets, weekly-community shares, and your Plus/Max subscription records
+(plan, status, periods, amount paid and offers, auto-renew; not transaction IDs or token hashes). It excludes imported
 media, original Apple or Google identifiers, and deleted items. Contact support if you need a broader
 access request covering internal account fields.
 
