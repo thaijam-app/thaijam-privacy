@@ -119,6 +119,7 @@ For redeem codes, the server stores only a hash of the code and who redeemed it,
 - Your invite code is linked to your account (stored as-is so it can be shown to you).
 - When someone enters your code, we record who invited whom and the rewards given; for the invited person we keep only the dates they studied, to check whether the reward threshold was reached.
 - To stop one device from claiming twice: iOS uses Apple's DeviceCheck (ThaiJam stores no device identifier); for Android see the Android policy.
+- When you delete your account: your study dates are deleted at once; your invite code is deleted or disabled and can no longer be used; the record of who invited whom is kept in pseudonymized form for **one year**, then deleted. Rewards the other person already received are not taken back.
 
 ### Weekly community topics
 
@@ -259,6 +260,21 @@ Google account signed in to ThaiJam, and Firebase holds its authentication recor
 Firebase Authentication—not Firebase Analytics or Crashlytics. Sign in with Apple uses Apple's
 native iOS flow and does not pass through Firebase. [Google's privacy policy](https://policies.google.com/privacy) applies.
 
+### Plus and Max subscriptions
+
+Subscriptions are bought and renewed through the App Store (iOS) or Google Play (Android). **Payment details are handled by Apple or Google; ThaiJam never receives them.** To know which plan you have and how long you have been a member, we keep:
+
+| Data | Purpose |
+| --- | --- |
+| Plan (Plus or Max), monthly or yearly, current status (active, grace period, billing retry, expired, revoked), start and expiry dates, whether it auto-renews | Decide which features you can use now |
+| For each period: transaction ID, dates, offer type and the amount paid | Member-card months, offers and refund reconciliation |
+| Apple transaction IDs and a hash of the signed payload; the Google Play order ID and a **hash of the purchase token** (not the token itself) | Verify the transaction with Apple or Google |
+| Subscription notifications from Apple: notification ID, type, transaction ID, processing status and time | Reflect renewals, refunds and revocations promptly; this log does not contain your account |
+
+When you buy on Google Play, the account reference we give Google is a **one-way hash** of your ThaiJam account, so Google never receives your ThaiJam account ID.
+
+**Deleting your ThaiJam account does not cancel a subscription.** Cancel it first in App Store or Google Play subscription settings, or it will keep renewing. After deletion, subscription records are kept in pseudonymized form for **five years**, like purchase records, then deleted automatically.
+
 ### Export your data
 
 Profile → Account settings → Export my data downloads a machine-readable JSON file containing study
@@ -278,8 +294,10 @@ study progress, songs, lyrics, AI results and Study Coin data. Topic-mission pla
 ability badges, your personal study set, backpack tickets and redeem records are deleted too, and your
 weekly-community shares, encouragement and votes are removed (see "Weekly community topics" for reports).
 
-Purchase, credit-spending and related service records are retained in **pseudonymized form for five
-years**, then deleted automatically. They retain no link to a sign-in account and are kept for tax
+Purchase, credit-spending and related service records (including Plus/Max subscription records) are
+retained in **pseudonymized form for five years**, then deleted automatically. Records of who invited
+whom are kept in pseudonymized form for **one year** (to stop the same person deleting and re-registering
+to claim invite rewards again), then deleted automatically. They retain no link to a sign-in account and are kept for tax
 recordkeeping and delayed App Store refund reconciliation.
 
 Local data on the device is not deleted. Imported audio and artwork in your private iCloud database
