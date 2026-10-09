@@ -9,7 +9,7 @@ permalink: /privacy-policy-en/
 [繁體中文版](/privacy-policy/)
 
 > This page applies to the **iOS version**. The Android version has a
-> [separate policy](/privacy-policy-android/) because it does not use iCloud or Apple Music.
+> [separate policy](/privacy-policy-android-en/) because it does not use iCloud or Apple Music.
 
 ## In one sentence
 
