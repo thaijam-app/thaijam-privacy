@@ -4,7 +4,7 @@ permalink: /privacy-policy/
 
 # ThaiJam 泰記 App 隱私權政策(iOS 版)
 
-**最後更新：2026 年 ○ 月 ○ 日**（草稿：1.1 發布時填入）
+**最後更新：2026 年 10 月 19 日**
 
 [简体中文](/privacy-policy-zh-cn/) ｜ [English](/privacy-policy-en/)
 

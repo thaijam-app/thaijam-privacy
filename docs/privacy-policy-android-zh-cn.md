@@ -4,7 +4,7 @@ permalink: /privacy-policy-android-zh-cn/
 
 # ThaiJam 泰记 Android 版隐私政策
 
-**最后更新:2026 年 ○ 月 ○ 日**(草稿:1.1 发布时填入)
+**最后更新:2026 年 10 月 19 日**
 
 [繁體中文](/privacy-policy-android/) ｜ [English](/privacy-policy-android-en/)
 

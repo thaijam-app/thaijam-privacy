@@ -4,7 +4,7 @@ permalink: /privacy-policy-android-en/
 
 # ThaiJam Privacy Policy (Android)
 
-**Last updated: ○ ○ 2026** (draft: fill in when 1.1 ships)
+**Last updated: 19 October 2026**
 
 [繁體中文](/privacy-policy-android/) | [简体中文](/privacy-policy-android-zh-cn/)
 
