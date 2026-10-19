@@ -15,8 +15,8 @@ permalink: /privacy-policy-en/
 
 ThaiJam does **not** sell your data or use it for advertising or cross-app tracking. Most data
 starts on your device. Depending on the features you choose, the app may connect to ThaiJam's
-Cloudflare services, your private iCloud database, LRCLIB, Apple Music, Spotify, Shazam,
-OpenAI, or Microsoft Azure Speech as described below. **The one connection that does not wait for
+servers, your private iCloud database, lyric and music services, or the **third-party AI providers**
+that process content for AI and speech features, as described below. **The one connection that does not wait for
 you to do anything is the launch-time fetch of the social invitation card's content** (item 4 under
 outbound network connections) — that request carries no account, no device identifier and no study
 data.
@@ -80,7 +80,7 @@ merge the two server accounts automatically.
 
 ## Data from features added in 1.1
 
-The features below belong to your ThaiJam account and are stored on ThaiJam's servers (Cloudflare).
+The features below belong to your ThaiJam account and are stored on ThaiJam's servers.
 **None of them stores recordings.**
 
 ### Topic missions: plans and answer records
@@ -141,8 +141,42 @@ Withdrawing a share removes only the public card, not your private progress or b
 ### Drama audio
 
 - Pre-recorded lines are downloaded from ThaiJam's servers and cached on your device (up to 200 MB; the least recently used files are removed first). **These downloads carry no account or identifier.**
-- Lines without a recording are synthesized on demand by ThaiJam's server: only **the Thai line from the lesson and the voice gender** are sent, then passed to [OpenAI](https://openai.com/policies/privacy-policy) for speech synthesis. Results are cached by content hash with no account attached. To prevent abuse, this request needs a signed-in account and app verification, and counts toward a daily limit.
+- Lines without a recording are synthesized on demand by ThaiJam's server: only **the Thai line from the lesson and the voice gender** are sent, then passed to a third-party AI provider for speech synthesis. Results are cached by content hash with no account attached. To prevent abuse, this request needs a signed-in account and app verification, and counts toward a daily limit.
 - Lines that would contain your own name are **never read aloud**, so your name is never sent for synthesis.
+
+### AI conversations and custom role-play
+
+- During a conversation, your **recording and the recognized text** are sent through ThaiJam's server to third-party AI providers to recognize what you said and produce Jammy's reply and voice. Recordings are **not** stored.
+- When a conversation finishes, we keep its **text transcript** (what both sides said), the number of turns, pronunciation and fluency scores, and the phrases you practised, so you can review it in your conversation history and learning report and continue on another device.
+- Custom role-play also keeps the role, goal and constraint you chose and which part you reached.
+- These records are **visible only to you** and are deleted with your account.
+
+### Push notifications
+
+Only after you allow notifications. To deliver them we keep:
+
+| Data | Purpose |
+| --- | --- |
+| This device's push token (issued to the app by Apple or Google), platform, app language and time zone | Deliver to the right device, in your language, at a suitable time |
+| Whether you agreed to **service notifications** (support replies, rewards) and to **promotional notifications**, and when you agreed to the latter | Send only the kinds you agreed to; promotional notifications are off by default |
+| Which device each notification was sent to and whether it was delivered | Avoid duplicates and troubleshoot delivery |
+
+Notifications are written by ThaiJam and delivered through Apple's push service (iOS) or Google's push service (Android). You can turn them off at any time in system or app settings; tokens and delivery records are deleted with your account.
+
+### Lock-screen streak countdown (iOS Live Activity)
+
+If you turn on the streak countdown, we keep this device's Live Activity token, time zone, language, how many hours ahead to remind you, and today's goal, answers and streak, to update the countdown on the Lock Screen and Dynamic Island. Turning it off stops updates; it is deleted with your account.
+
+### Collectible cards: nearby landmarks and QR cards
+
+- **Nearby landmarks:** if you turn this on and allow location "While Using the App", the app checks **on your device** whether you are near a landmark and unlocks that exploration card when you arrive. **Your coordinates never leave the device**; the server records only which card you got, when, and how (for example "landmark"). The app does not track your location in the background.
+- **QR cards:** when you scan an event or partner QR card with the camera, the image is recognized on the device and only the code inside the QR is sent to the server to verify and grant the card.
+
+### Card leaderboard and nickname
+
+- The leaderboard scores the cards you collect. **It is anonymous by default**: others see only "Anonymous player" and a number that cannot be traced to your account.
+- Only if you **turn on "Show on leaderboard"** in your profile can other users see your nickname and the Jammy avatar card you chose.
+- At the end of a season the top places are frozen as that season's results to grant reward cards; your results are deleted with your account.
 
 ## Identifiers used on iOS
 
@@ -159,7 +193,7 @@ advertising or tracking across apps.
 
 ## AI usage records
 
-ThaiJam does not use Firebase Analytics, Crashlytics, or another third-party analytics SDK, and it
+ThaiJam does not use any third-party analytics or crash-reporting SDK, and it
 does not record your navigation through the app. However, each AI request creates a service record
 linked to your ThaiJam account containing:
 
@@ -177,7 +211,7 @@ disclosure in the app's App Store privacy information.
 The app may connect to the network in these cases:
 
 1. **Cross-device sync.** If enabled, study records, user content, song details, lyrics, purchased
-   AI results and Study Coin data are sent to ThaiJam's Cloudflare services and linked to your
+   AI results and Study Coin data are sent to ThaiJam's servers and linked to your
    ThaiJam account.
 2. **iCloud audio backup.** If enabled, imported audio and artwork are stored in your private
    CloudKit database. ThaiJam cannot read that private database and keeps no server copy.
@@ -208,34 +242,41 @@ The app may connect to the network in these cases:
 8. **Shazam.** After you choose Identify song and allow microphone access, ShazamKit matches an
    audio signature. ThaiJam does not keep or upload the raw recording. Apple's terms apply.
 9. **Pronunciation assessment.** After you record and submit up to 10 seconds of speech, the audio
-   and Thai reference text are sent through ThaiJam's Cloudflare Workers to Microsoft Azure Speech.
+   and Thai reference text are sent through ThaiJam's server to a third-party AI provider.
    The recording is buffered temporarily and deleted after submission or when you leave the screen.
-   Neither ThaiJam nor the assessment service writes the recording or recognized text to a database.
-   The returned score and recognized text remain locally; if cross-device sync is enabled, only the
-   score and timestamp sync to ThaiJam. [Microsoft's privacy statement](https://privacy.microsoft.com/privacystatement) applies.
-10. **AI text features.** These are described in the next section.
+   Neither ThaiJam nor the provider writes the recording or recognized text to a database.
+   The returned score remains locally; if cross-device sync is enabled, only the score and timestamp
+   sync to ThaiJam.
+10. **AI text and speech features.** These are described in the next section.
+11. **Speech recognition for speaking practice.** Speaking exercises (topic missions, example
+    fill-in, guided speaking) use Apple's speech recognition to turn your Thai into text. As Apple
+    designs it, recognition may happen on the device or on Apple's servers;
+    [Apple's privacy policy](https://www.apple.com/legal/privacy/) applies. ThaiJam uses only the
+    recognized text to check your answer and does not keep the recording.
+12. **Push notifications.** See "Push notifications" above.
 
 Read-aloud, Apple Translation, word segmentation and tracing scores run on the device.
 
-## AI text features
+## AI features: where your content goes
 
-Text leaves the device only when you choose song analysis, dictionary lookup, an AI explanation or
-extra examples.
+Content leaves the device only when you use one of the AI or speech features below.
 
-| Feature | Text sent |
+| Feature | What is sent |
 | --- | --- |
 | Song analysis | Lyrics you provide, after repeated choruses and section labels are removed |
-| Dictionary lookup | The Thai term you enter |
-| AI explanation | The Thai text on that card |
-| Extra examples | The built-in pattern formula, explanation and existing examples |
+| Dictionary lookup, AI explanation | The Thai you enter or the Thai on that card |
+| Extra examples, Jammy quizzes | Built-in lesson content (none of your data) |
+| AI conversation, custom role-play | Your recording, the recognized text and the conversation so far |
+| Pronunciation assessment | Up to 10 seconds of audio and the reference text |
+| Reading lines and examples aloud | The Thai from the lesson and the voice gender |
 
-The text first reaches ThaiJam's Cloudflare Workers and is then forwarded to the
-[OpenAI API](https://openai.com/policies/privacy-policy). ThaiJam authenticates your request with
-your account session for credits, rate limiting and abuse prevention. The content forwarded to
-OpenAI contains no Apple or Google identifier, email address or other direct identifier.
+Content first reaches ThaiJam's server and is then forwarded to **third-party AI providers** to
+produce the result (translation, analysis, reply, voice or score). ThaiJam authenticates your request
+with your account session for credits, rate limiting and abuse prevention. The content forwarded to
+AI providers contains **no ThaiJam account ID, Apple or Google identifier, email address or other
+direct identifier** — only what the table lists.
 
-These AI text features do not send your study history, decks, imported audio or artwork.
-Pronunciation audio goes to Azure Speech, not OpenAI.
+Not sent to AI providers: your study history, review progress, decks, imported audio or artwork.
 
 ### AI result cache
 
@@ -255,10 +296,10 @@ user ID and an email address you choose to share. It does not receive your Apple
 real name or payment details. App Store payments are handled by Apple; ThaiJam receives a transaction
 identifier needed to credit the purchase and handle refunds.
 
-Google sign-in is handled by Firebase Authentication. Google therefore learns that the selected
-Google account signed in to ThaiJam, and Firebase holds its authentication record. ThaiJam uses only
-Firebase Authentication—not Firebase Analytics or Crashlytics. Sign in with Apple uses Apple's
-native iOS flow and does not pass through Firebase. [Google's privacy policy](https://policies.google.com/privacy) applies.
+Google sign-in is handled by Google's authentication service, so Google learns that the selected
+Google account signed in to ThaiJam and keeps an authentication record;
+[Google's privacy policy](https://policies.google.com/privacy) applies. Sign in with Apple uses
+Apple's native iOS flow; [Apple's privacy policy](https://www.apple.com/legal/privacy/) applies.
 
 ### Plus and Max subscriptions
 
@@ -292,7 +333,9 @@ require contacting support.
 Deletion closes the active ThaiJam account and removes any Apple or Google sign-in link, email,
 App Attest device-key information, feedback, remaining AI Credits, and the server copy of cards,
 study progress, songs, lyrics, AI results and Study Coin data. Topic-mission plans and answer records,
-ability badges, your personal study set, backpack tickets and redeem records are deleted too, and your
+ability badges, your personal study set, backpack tickets and redeem records, AI conversation and
+custom role-play records, push and Live Activity tokens, and leaderboard results and nickname are
+deleted too, and your
 weekly-community shares, encouragement and votes are removed (see "Weekly community topics" for reports).
 
 Purchase, credit-spending and related service records (including Plus/Max subscription records) are
@@ -308,13 +351,16 @@ are also unaffected, but your data will no longer have a ThaiJam server copy.
 
 | Permission | When it is used | Effect of declining |
 | --- | --- | --- |
-| Notifications | Local reminders when cards are due | Only reminders are disabled |
+| Notifications | Local review reminders; once allowed, also ThaiJam's service notifications and any promotional notifications you opt into (see "Push notifications") | Only notifications are disabled |
 | Files | Import audio or a flashcard CSV you select | Only the import is unavailable |
 | Photos | Select song artwork | Only photo selection is unavailable |
 | Media and Apple Music | Search or play Apple Music after you enable it | Only Apple Music integration is unavailable |
-| Microphone | Identify nearby music with ShazamKit or submit a pronunciation recording | Only those two features are unavailable |
+| Microphone | Identify music with ShazamKit, pronunciation assessment, speaking practice or AI conversations | Only features that need speech are unavailable |
+| Speech recognition | Turn your spoken Thai into text in speaking practice | You can answer by typing or with word tiles instead |
+| Location (while using the app) | Nearby-landmark cards, checked on the device; coordinates never leave it | Only nearby landmarks are unavailable |
+| Camera | Scan QR cards; the image is recognized on the device | Only QR scanning is unavailable |
 
-ThaiJam does not use the camera, location, contacts or health data.
+ThaiJam does not track your location in the background and does not use contacts or health data.
 
 ## Children and minors
 
@@ -325,9 +371,23 @@ controls. Refund requests can be made through [Apple's refund process](https://s
 ## Export, transfer and backup
 
 - A CSV created by Export backup is stored or shared only where you choose; ThaiJam does not upload it.
-- Cross-device sync stores selected study data on ThaiJam's Cloudflare services.
+- Cross-device sync stores selected study data on ThaiJam's servers.
 - iCloud audio backup stores imported audio and artwork in your private CloudKit database. Local app
   data may also be included in iCloud device backup if you enable that Apple feature.
+
+## Categories of service providers
+
+We use the following categories of service providers to run the features above. They process data
+only on our instructions and only to provide that feature:
+
+| Category | Purpose |
+| --- | --- |
+| Cloud hosting and storage | Run ThaiJam's servers, store account and synced data, serve lessons and audio |
+| Third-party AI providers | AI analysis and conversation, speech synthesis, pronunciation assessment |
+| Sign-in (Apple, Google) | Let you sign in with an Apple or Google account |
+| Payments (Apple, Google) | In-app purchases and subscriptions; payment details stay with them |
+| Push delivery (Apple, Google) | Deliver notifications to your device |
+| Lyric and music services | Only when you use song features (see outbound connections) |
 
 ## Content reports
 
