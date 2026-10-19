@@ -8,8 +8,6 @@ permalink: /privacy-policy-android/
 
 [简体中文](/privacy-policy-android-zh-cn/) ｜ [English](/privacy-policy-android-en/)
 
-[English version](/privacy-policy-android-en/)
-
 > 本頁適用於 **Android 版**。iOS 版的政策在[另一頁](/privacy-policy/)——
 > 兩個平台的功能範圍不同(Android 沒有 iCloud 備份),所以資料處理方式也不同。
 
