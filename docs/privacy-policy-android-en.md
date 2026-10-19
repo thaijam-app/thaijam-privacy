@@ -384,7 +384,7 @@ See "8. Buying AI credits" above for how purchase data is handled.
 
 ## Categories of service providers we use
 
-To provide the features above we use service providers in the following categories. What each one receives is described under the matching feature above:
+To provide the features above we use service providers in the following categories. They process data only on our instructions and only to provide that feature:
 
 | Category | Use |
 | --- | --- |

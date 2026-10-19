@@ -379,7 +379,8 @@ controls. Refund requests can be made through [Apple's refund process](https://s
 
 ## Categories of service providers
 
-We use the following categories of service providers to run the features above. What each one receives is described under the matching feature above:
+We use the following categories of service providers to run the features above. They process data
+only on our instructions and only to provide that feature:
 
 | Category | Purpose |
 | --- | --- |
