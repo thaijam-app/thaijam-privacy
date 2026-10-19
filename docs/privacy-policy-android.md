@@ -2,62 +2,11 @@
 permalink: /privacy-policy-android/
 ---
 
-<!--
-  ─────────────────────────────────────────────────────────────
-  **這一份是發布中的正式版本,網址是**
-  https://privacy.thaijam.app/privacy-policy-android/
-
-  ⚠️ **發布的來源是 `thaijam-app/thaijam-privacy` 這個 repo,不是 ThaiJam。**
-  (2026-08-14 更正 —— 這一段原本寫「它由這個 repo 的 GitHub Pages 產生」,
-  而那份檔案當時在 ThaiJam repo 裡。那句話讓人以為推 ThaiJam 就會發布,
-  實際上推了 59 個 commit 一點反應都沒有,而線上停在五天前的舊版。)
-
-  `thaijam-privacy/docs/` 才是 Pages 的來源(CNAME 在那裡)。ThaiJam repo
-  裡的同名檔案是**編輯用的副本**,改完要複製過來才會上線。
-
-  **兩份副本正是這一頁會過期的原因** —— 上一次是政策寫著「學習內容不會
-  上傳」而跨裝置同步早就做出來了;這一次是政策沒有提到發音評測會把錄音
-  送到 Microsoft Azure,而那個功能在 production 已經開著。
-  改任何一邊之後,**一定要確認 https://privacy.thaijam.app 上真的變了**。
-
-  iOS 版的政策在同目錄的 privacy-policy.md。兩個平台的功能範圍不同
-  (iOS 有 iCloud 備份,Android 沒有),所以刻意分成兩頁而不是一頁分節。
-
-  ⚠️ **這一行原本寫「Android 沒有 Apple Music」,那是錯的**(2026-08-14 更正)。
-  Android 有完整的 Apple Music 整合(MusicKit 授權、搜尋、播放控制),
-  也有聽歌辨識(ShazamKit)、Apple 登入、Google Play 購買 ——
-  這四項當時政策裡一個字都沒有。**兩邊的功能差距比這份文件以為的小得多**,
-  下次寫「Android 沒有 X」之前先去 app/src 確認。
-
-  **AI 兩邊都有了**(2026-08-14 更正)。這一行原本寫「Android 目前沒有 AI」,
-  而同一份文件的第四節就在說明 AI 點數 —— 一份自我矛盾的隱私權政策比
-  過期的更糟,因為讀的人不知道該信哪一句。
-
-  ─────────────────────────────────────────────────────────────
-  **這一份的每一句都對應到 Android 的程式碼,改功能就要回來改它。**
-
-  Play Console 的「資料安全」表單必須跟這一頁逐項對得上 ——
-  對不上是下架等級的問題。填表的逐題答案在 ThaiJamAndroid repo 的
-  docs/play-data-safety-answers.md。
-
-  審核時逐項核對的來源(都在 ThaiJamAndroid):
-    - 上傳哪些東西  → SyncCodecs.KIND_*(現在十個)
-    - 會發哪些請求  → ThaiJamApi 裡有呼叫端的那幾支
-    - 權限          → AndroidManifest.xml 的 uses-permission
-    - 沒上線的功能  → 對應的 task 還是 pending
-
-  有一條測試(PrivacySyncCoverageTest)會在同步的 kind 清單變動時變紅,
-  提醒回來改這一頁。
-
-  App 內的同一份說明在 ThaiJamAndroid 的
-  app/src/main/java/com/thaijam/android/ui/settings/PrivacyPolicyScreen.kt,
-  兩邊要一起改。
-  ─────────────────────────────────────────────────────────────
--->
-
 # ThaiJam 泰記 Android 版隱私權政策
 
 **最後更新:2026 年 ○ 月 ○ 日**(草稿:1.1 發布時填入)
+
+[简体中文](/privacy-policy-android-zh-cn/) ｜ [English](/privacy-policy-android-en/)
 
 > 本頁適用於 **Android 版**。iOS 版的政策在[另一頁](/privacy-policy/)——
 > 兩個平台的功能範圍不同(Android 沒有 iCloud 備份),所以資料處理方式也不同。
@@ -261,6 +210,8 @@ App 會在**開啟時、切回前景時,以及你新增或修改內容之後**�
 查詢你的點數餘額與消費紀錄、以及你輸入兌換碼時,會向我們的伺服器請求。
 只有你主動使用下面的 AI 或語音功能時,才會把內容送出手機。
 
+**第一次使用前會先徵求你的同意。** 你同意之前，錄音與文字不會送給第三方 AI 服務商；不同意的話 AI 功能不會運作，App 其他功能照常使用。之後可以隨時在「設定 → 關於」打開或關閉。（App 內建教材的補例句、Jammy 出題與台詞朗讀不含你的內容，不需要這項同意。）
+
 **送出的內容**
 
 | 功能 | 送出什麼 |
@@ -430,7 +381,7 @@ App 安裝檔內。發音播放、泰文斷詞、描摹評分、拼音顯示全�
 也沒有第三方分析套件;唯一的推廣內容是 App 內的邀請卡 —— 目前只放 ThaiJam
 自己的內容,未來若放合作創作者的內容會加上標示,見「對外的網路連線」第十一條)。
 
-Android 版有一項付費項目:**AI 點數**(消耗性商品)。它一律透過
+Android 版的付費項目(**AI 點數**與 **Plus／Max 訂閱**)一律透過
 Google Play 帳單處理,未成年使用者的消費受 Google Play 的家長控制管理
 (家長可要求「購買前需驗證」);我們不會、也無法繞過這些設定。
 購買時的資料處理見上面「八、購買 AI 點數」。

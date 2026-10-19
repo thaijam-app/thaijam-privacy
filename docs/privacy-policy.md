@@ -6,10 +6,10 @@ permalink: /privacy-policy/
 
 **最後更新：2026 年 ○ 月 ○ 日**（草稿：1.1 發布時填入）
 
-[English version](/privacy-policy-en/)
+[简体中文](/privacy-policy-zh-cn/) ｜ [English](/privacy-policy-en/)
 
 > 本頁適用於 **iOS 版**。Android 版的政策在[另一頁](/privacy-policy-android/)——
-> 兩個平台的功能範圍不同(Android 版沒有 iCloud、沒有 Apple Music),
+> 兩個平台的功能範圍不同(Android 版沒有 iCloud 備份),
 > 所以資料處理方式也不同。
 
 ## 一句話總結
@@ -256,6 +256,8 @@ LRCLIB 的資料處理方式請見他們的網站。
 ## AI 功能：你的內容會送到哪裡
 
 只有你主動使用下面的 AI 或語音功能時才會發生。沒有使用，就沒有任何內容離開你的裝置。
+
+**第一次使用前會先徵求你的同意。** 你同意之前，錄音與文字不會送給第三方 AI 服務商；不同意的話 AI 功能不會運作，App 其他功能照常使用。之後可以隨時在「設定 → 關於」打開或關閉。（App 內建教材的補例句、Jammy 出題與台詞朗讀不含你的內容，不需要這項同意。）
 
 **送出的內容**
 

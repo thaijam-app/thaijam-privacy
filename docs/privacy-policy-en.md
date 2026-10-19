@@ -6,10 +6,10 @@ permalink: /privacy-policy-en/
 
 **Last updated: ○ ○ 2026** (draft: fill in when 1.1 ships)
 
-[繁體中文版](/privacy-policy/)
+[繁體中文](/privacy-policy/) | [简体中文](/privacy-policy-zh-cn/)
 
 > This page applies to the **iOS version**. The Android version has a
-> [separate policy](/privacy-policy-android/) because it does not use iCloud or Apple Music.
+> [separate policy](/privacy-policy-android-en/) because it has no iCloud backup.
 
 ## In one sentence
 
@@ -260,6 +260,8 @@ Read-aloud, Apple Translation, word segmentation and tracing scores run on the d
 ## AI features: where your content goes
 
 Content leaves the device only when you use one of the AI or speech features below.
+
+**We ask for your consent before the first use.** Until you agree, no recording or text is sent to third-party AI providers; if you decline, AI features stay off and the rest of the app works as usual. You can turn it on or off at any time in Settings → About. (Example sentences, Jammy quizzes and line playback use only built-in course content, contain nothing of yours, and do not need this consent.)
 
 | Feature | What is sent |
 | --- | --- |
