@@ -4,7 +4,7 @@ permalink: /privacy-policy-android-en/
 
 # ThaiJam Privacy Policy (Android)
 
-**Last updated: 19 October 2026**
+**Last updated: 26 October 2026**
 
 [繁體中文](/privacy-policy-android/) | [简体中文](/privacy-policy-android-zh-cn/)
 
@@ -13,7 +13,7 @@ permalink: /privacy-policy-android-en/
 
 ## In one sentence
 
-ThaiJam **does not sell your data or use it for ad tracking**. There is no advertising SDK,
+ThaiJam **does not sell your data**. The only ads are rewarded ads you choose to watch, served by Google AdMob (see "Ads: watching an ad for cans"). There is
 **no third-party analytics and no crash-reporting tool** (AI usage is recorded; see "Usage records" below).
 
 **Signing in with Google or Apple is optional.** If you choose "Start learning" on first launch, the app
@@ -116,7 +116,7 @@ Lines that would contain your name **are never read aloud**, so your name is nev
 
 ### What we do not collect
 
-**No advertising ID, and no background location tracking.**
+**ThaiJam itself never reads the advertising ID (Google AdMob uses it only for the ads you choose to watch; see "Ads: watching an ad for cans"), and there is no background location tracking.**
 The app does not record which screens you open, how long you stay or what you tap. There is no analytics or crash-reporting SDK.
 
 ### Usage records: AI requests are logged
@@ -345,7 +345,7 @@ the app is shown, so the card is complete and can be closed even offline.
 In future it may show content from **creators who work with ThaiJam**; in that case the card will be labelled "Partner"
 so you can tell at a glance it is not ours.
 
-Whoever's content it shows, four things hold: **no third-party advertising SDK, no advertising ID,
+Whoever's content it shows, four things hold: **no ad SDK involved, no advertising ID used,
 no record of how many times you saw or tapped it, and images are hosted on ThaiJam's own servers**,
 so seeing the card never connects you to someone else's server.
 
@@ -357,6 +357,38 @@ in the app. Pronunciation playback, word segmentation, tracing scores and romani
 **Of the connections above, only item 11 (the community invitation card) needs nothing from you first**;
 every other one needs you to use the matching feature.
 
+## Ads: watching an ad for cans
+
+From version 1.2, ThaiJam has **rewarded ads**. An ad plays only when you tap "Watch an ad", and finishing it
+gives you cans to exchange for in-app items. There are no banner ads and no ads inside lessons. Every learning
+feature works without watching ads. Only accounts linked to Google or Apple can watch ads.
+
+**Ads are served by Google AdMob.** When you open a screen that offers an ad (the cans card in the shop, the
+pronunciation check after you run out, cans in your backpack), the app preloads one ad from AdMob and discards it
+when you leave. If you never open those screens, the app does not connect to AdMob.
+
+While loading and showing an ad, Google may collect and process:
+- your IP address and the approximate location derived from it
+- basic device and app information (such as model, OS version, language and app version)
+- **your Android advertising ID** (you can reset or delete it in Settings → Google → Ads; once deleted, neither the app nor Google can read it)
+- your interaction with the ad (such as whether you finished or tapped it), and diagnostics such as crash and performance data
+
+Google uses this data to provide, measure and improve ads and to prevent fraud, as described in the
+[Google Privacy Policy](https://policies.google.com/privacy) and
+[How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites).
+
+**We do not give Google your ThaiJam account ID, email, nickname or learning data.**
+Cans are credited only when AdMob's servers notify ThaiJam; that notification carries a token issued by ThaiJam
+that contains no identity. Our server keeps the transaction number and time to prevent double credits and to
+count the daily limit. Your cans history is part of your account data: you can export it, and it is deleted with
+your account.
+
+**Your choices:**
+- In the European Economic Area, the UK, Switzerland and similar regions, Google's consent form appears before
+  your first ad; you can change your choice later from "Privacy options" in the cans shop.
+- If you don't want ads chosen by your interests, delete your advertising ID in Settings → Google → Ads. **You
+  can still watch ads and still get cans.** We never offer cans or any other reward in exchange for your consent.
+
 ## Permissions
 
 | Permission | Use |
@@ -367,14 +399,15 @@ every other one needs you to use the matching feature.
 | Camera (`CAMERA`) | Scanning QR cards; the image is recognized only on the phone. Declining only turns off QR scanning. |
 | File access | **The app declares no storage permission.** Importing a flashcard CSV or song audio uses the Android system file picker, where you choose one file; the app can read only that file and nothing else. Song audio is **copied** into the app's private storage (access from the system picker can expire at any time, and without a copy the song would stop playing) and deleted when you delete the song. |
 | Microphone (`RECORD_AUDIO`) | **Always started by you**: pronunciation assessment (see 7), speaking practice (see 5a), AI conversation and custom role-play (see 4), and song recognition (which sends an **audio fingerprint** computed on the phone, see 10). The app does not ask for it at launch; declining only turns off features that need speaking. |
+| Advertising ID (`AD_ID`) | Read by Google AdMob when you watch an ad for cans (see "Ads: watching an ad for cans"); delete it in Settings → Google → Ads and you can still watch ads and get cans. |
 
 **No background location tracking, and no use of contacts or health data.**
 
 ## Children and minors
 
 The app is not directed primarily at children; its age rating is shown by Google Play based on the content rating questionnaire and
-local standards. ThaiJam does not collect personal data for advertising (the app has no third-party ads
-and no third-party analytics; the only promotional content is the in-app invitation card, which currently shows only ThaiJam's
+local standards. ThaiJam does not collect children's personal data for advertising. Its only third-party ads are
+rewarded ads users choose to watch (see "Ads: watching an ad for cans"), and it has no third-party analytics; the only other promotional content is the in-app invitation card, which currently shows only ThaiJam's
 own content and will be labelled if it shows partner creators' content in future; see item 11 under "Network connections").
 
 Purchases in the Android version (AI credits and Plus / Max subscriptions) are always processed through
@@ -394,6 +427,7 @@ To provide the features above we use service providers in the following categori
 | Payments (Google Play) | In-app purchases and subscriptions; payment details are handled by Google and never reach ThaiJam |
 | Push service (Google) | Delivering notices to your phone |
 | Lyric and music services | Only when you use song features (see 1, 6, 9 and 10) |
+| Advertising (Google AdMob) | Only when you watch an ad for cans; Google processes this data under its own privacy policy (see "Ads: watching an ad for cans") |
 
 ## Changes
 
